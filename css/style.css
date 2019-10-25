@@ -1,15 +1,14 @@
 
 body {
     background-color: black;
-}
-
-.site {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
 }
+
+
 
 p {
     color: white;
@@ -39,7 +38,6 @@ h3 {
     
 
 .logo {
-    /*  flex-grow: 1; helps a lot here */
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
@@ -47,25 +45,36 @@ h3 {
     justify-content: center;
 }
 
+.site-footer {
+    /* padding-bottom: 50px;
+    /* padding-left: 50px; */
+    padding-top: 230px;
+    font-size: 1.2rem; 
+}
+
 
 
 
 
 @media screen and (min-width:600px){
-
-
+    main{
+        width:95%;
+        margin:0 auto;
+        text-align: center;
+    }
+    
     .site {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        /* min-height: 100vh; */
+        
     }
     .logo {
-        /*  flex-grow: 1; helps a lot here */
-        /* flex-grow: 1;  */
+        
         display: flex;
         flex-direction: row;
+        height: 80vh;
        
     }
     img {
@@ -77,19 +86,18 @@ h3 {
     .section {
         padding-left: 50px;
         padding-bottom: 50px;
-        
+    }
 
-       
+    .site-footer p {
+        display: initial;
     }
 
 
     h3 {
          font-size: 1.3rem;
-
     }
 
     .sections {
-        
         padding: 20% 16% 20% 16%;
     }
 
@@ -97,6 +105,7 @@ h3 {
         padding-bottom: 50px;
         padding-left: 50px;
         font-size: 1.2rem;
+        padding-top: 0;
     }
 
 
@@ -104,3 +113,31 @@ h3 {
 
 
 }
+@media screen and (min-width:1000px){
+main{
+    display: flex;
+    text-align: left;
+    width:100%;
+    padding-top: 50px;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.site-footer {
+    bottom: 0;
+    position: absolute;
+    
+}
+
+
+}
+
+
+
+
+
+
