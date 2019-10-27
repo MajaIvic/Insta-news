@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Insta-news</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body >
+    <link rel="stylesheet" href="./build/css/style.min.css" />
+  </head>
+  <body>
     <main>
-    <div class="logo">
-    
-        <img src="./assets/images/nyt-logo.svg" alt="">
+      <div class="logo">
+        <img src="./assets/images/nyt-logo.svg" alt="" />
 
-        <div class="section"> 
-           
-        <h3>Choose a section:</h3>
-       
-        <select class="sections">
-        <option value="0">Sections..</option>
-        </select>
-    </div>
+        <div class="section">
+          <h3>Choose a section:</h3>
 
-    </div>
+          <form>
+            <select class="sections">
+              <option disabled="disabled" value="">Sections..</option>
+              <option value="home">Home</option>
+              <option value="arts">Arts</option>
+              <option value="books">Book</option>
+              <option value="food">Food</option>
+              <option value="fashion">Fashion</option>
+            </select>
+          </form>
+        </div>
+      </div>
 
-
-    <footer class="site-footer">
-            <p>©Copyright 2016 INSTANEWS</p>
-    </footer>
-    
-</main>
-
+      <footer class="site-footer">
+        <p>©Copyright 2016 INSTANEWS</p>
+      </footer>
+    </main>
 
     <script src="./build/js/script.min.js"></script>
-</body>
+  </body>
 </html>

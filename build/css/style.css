@@ -1,0 +1,113 @@
+body {
+  background-color: black;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh; }
+
+p {
+  color: white;
+  display: -webkit-box;
+  display: flex;
+  padding-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.69; }
+
+img {
+  display: -webkit-box;
+  display: flex;
+  padding-top: 25%; }
+
+h3 {
+  color: white;
+  padding-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300; }
+
+.sections {
+  background-color: white;
+  padding: 2% 8% 2% 8%; }
+
+.logo {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center; }
+
+.site-footer {
+  /* padding-bottom: 50px;
+      /* padding-left: 50px; */
+  padding-top: 230px;
+  font-size: 1.2rem; }
+
+@media screen and (min-width: 600px) {
+  main {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center; }
+  .site {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .logo {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    height: 80vh; }
+  img {
+    width: 280px;
+    height: auto;
+    padding: 0 20px 0 30px; }
+  .section {
+    padding-left: 50px;
+    padding-bottom: 50px; }
+  .site-footer p {
+    display: initial; }
+  h3 {
+    font-size: 1.3rem; }
+  .sections {
+    padding: 20% 16% 20% 16%; }
+  .site-footer {
+    padding-bottom: 50px;
+    padding-left: 50px;
+    font-size: 1.2rem;
+    padding-top: 0; } }
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: -webkit-box;
+    display: flex;
+    text-align: left;
+    width: 100%;
+    padding-top: 50px; }
+  .logo {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    align-self: center; }
+  .site-footer {
+    bottom: 0;
+    position: absolute; } }
