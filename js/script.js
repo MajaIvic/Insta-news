@@ -1,27 +1,44 @@
-//listen to the select menu to change(whatching value)
-//send a request to the NYT API for data based on the value of the select menu
-
-//.append the data (abstract, multimedia[4].url, url) into the empty div in your HTML(.articles)
-
 $(document).ready(function() {
   $("#select").on("change", function() {
-    const section = $(this).val();
+    const section = $(this)
+      .val()
+      .toLowerCase();
     console.log(section);
 
+    //console.log(data);
+
     $.ajax({
-      method: "GET",
+      method: "GET", // gets the api json file from nyt
       url:
         "https://api.nytimes.com/svc/topstories/v2/" +
         section +
-        ".json?api-key=4rt1RlE8LASv1wwdEoifJb3PweJksFgk",
+        ".json?api-key=4rt1RlE8LASv1wwdEoifJb3PweJksFgk", //api pth to the json file
       dataType: "json"
     }).done(function(data) {
-      for (let i = 0; i < 12; i++) {
-        console.log(data.results[i].title);
-        let p = document.createElement("p");
-        p.innerHTML = data.results[i].title;
-        // $(".articles").append(p);
-      }
+      //once above ajax is done, pass the data to this 'done' function
+
+      const results = data.results.slice(0, 12); //get 12 items from my data array
+
+      $("#articles").empty(); //clear out old articles
+
+      $.each(results, function(index, value) {
+        //for each 12 'results' find key and value
+        //console.log(value);
+        //make variable for each value needed
+        const link = value.url;
+        const img = value.multimedia[4].url;
+        const abstract = value.abstract;
+        console.log(img);
+
+        //append a template block to html target container
+        $("#articles").append(
+          ` <a class = 'nysite' href= ${link}>
+              <li class='storys' style='background-image:url(${img});'>
+                <p class='story-text'> ${abstract}</p>
+              </li>
+            </a> `
+        );
+      });
     });
   });
 });
