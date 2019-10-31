@@ -32,11 +32,11 @@ $(document).ready(function() {
 
         //append a template block to html target container
         $("#articles").append(
-          ` <a class = 'nysite' href= ${link}>
-              <li class='storys' style='background-image:url(${img});'>
-                <p class='story-text'> ${abstract}</p>
-              </li>
-            </a> `
+          `<li class='storys' style='background-image:url(${img});'>
+              <a class = 'nysite' href= ${link}>  
+                  <p class='story-text'> ${abstract}</p> 
+              </a>
+            </li> `
         );
       });
     });
