@@ -223,14 +223,24 @@ h3 {
   -webkit-box-pack: center;
           justify-content: center; }
 
-.articles li {
-  width: 500px;
-  height: 400px;
-  position: absolute; }
+.storys {
+  width: 100%;
+  height: 500px;
+  position: relative; }
+
+.articles .storys {
+  height: 420px;
+  background-size: cover; }
+
+.story-text {
+  bottom: 0;
+  margin: 0;
+  padding: 40px;
+  padding-right: 100px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .site-footer {
-  /* padding-bottom: 50px;
-      /* padding-left: 50px; */
   font-size: 16px; }
 
 @media screen and (min-width: 600px) {
