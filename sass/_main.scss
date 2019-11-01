@@ -17,6 +17,7 @@ img {
 
 h3 {
   color: white;
+  padding-top: 1rem;
   padding-bottom: 3%;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -52,19 +53,25 @@ h3 {
 .articles .storys {
   height: 450px;
   background-size: cover;
+  width: 100%;
 }
 .story-text {
   bottom: 0;
   margin: 0;
   padding: 0.5rem;
-
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.note {
+  margin-left: 3rem;
+}
 .site-footer {
   font-size: 16px;
-  margin: 20px;
+  margin: 2rem;
+  margin-left: 4rem;
+  p {
+    color: #c2c2c2;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -114,13 +121,16 @@ h3 {
   }
 
   .sections {
-    padding: 20% 16% 20% 16%;
+    margin: 10% 16% 20% 16%;
+  }
+  .note {
+    margin-left: 15rem;
   }
 
   .site-footer {
-    padding-bottom: 50px;
-    padding-left: 50px;
-    font-size: 1.2rem;
+    margin: 3rem;
+    margin-left: 17rem;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -130,9 +140,7 @@ h3 {
     width: 100%;
     padding-top: 50px;
   }
-  .section {
-    padding-bottom: 15%;
-  }
+
   .logo {
     display: flex;
     justify-content: flex-start;
@@ -150,5 +158,8 @@ h3 {
       flex-basis: 25%;
       position: relative;
     }
+  }
+  .site-footer {
+    margin-left: 2rem;
   }
 }

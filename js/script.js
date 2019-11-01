@@ -62,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
       .fail(function() {
         console.log("failed!");
         $("#articles").empty();
-        $("#articles").append("<p>Please choose a section on the button</p>");
+        $("#articles").append(
+          "<p class='note'>Please choose a section on the button</p>"
+        );
       }); //close fail function!
   }); //close event listner
 });
