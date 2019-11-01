@@ -187,7 +187,7 @@ body {
   min-height: 100vh; }
 
 main {
-  height: 100vh; }
+  height: 89vh; }
 
 p {
   color: white;
@@ -205,13 +205,9 @@ h3 {
   font-size: 16px;
   font-weight: 300; }
 
-.section {
-  padding: 20%; }
-
 .sections {
   background-color: white;
-  width: 100px;
-  height: 30px;
+  padding: 0.5rem;
   font-size: 16px; }
 
 .logo {
@@ -227,6 +223,15 @@ h3 {
   -webkit-box-pack: center;
           justify-content: center; }
 
+.spin {
+  display: none;
+  padding-bottom: 10%;
+  padding-left: 40%; }
+  .spin img {
+    width: 100px;
+    -webkit-transition: 3s;
+    transition: 3s; }
+
 .storys {
   width: 100%;
   position: relative; }
@@ -238,7 +243,7 @@ h3 {
 .story-text {
   bottom: 0;
   margin: 0;
-  padding: 40px 120px 40px 120px;
+  padding: 0.5rem;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5); }
 
@@ -262,10 +267,8 @@ h3 {
               flex-direction: row;
       -webkit-box-flex: 1;
               flex-grow: 1;
-      flex-basis: 33%;
+      flex-basis: 50%;
       position: relative; }
-    .articles .story-text {
-      padding: 5px 20px 25px 10px; }
   .articles .storys {
     height: 300px; }
   .site {
