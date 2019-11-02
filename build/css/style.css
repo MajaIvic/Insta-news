@@ -186,34 +186,69 @@ body {
   background-color: black;
   min-height: 100vh; }
 
-main {
-  height: 89vh; }
+.site_header {
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+  .site_header.scale_header {
+    height: 89vh; }
+  @media (min-width: 600px) {
+    .site_header {
+      height: 89vh;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; } }
+  @media (min-width: 1000px) {
+    .site_header {
+      height: 80vh;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: start;
+              justify-content: flex-start; } }
 
 p {
   color: white;
   font-family: "Open Sans", sans-serif; }
 
-img {
-  display: -webkit-box;
-  display: flex;
-  padding-top: 25%; }
-
 h3 {
   color: white;
-  padding-top: 1rem;
-  padding-bottom: 3%;
+  margin: 10% 0% 10%;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300; }
+  @media (min-width: 600px) {
+    h3 {
+      font-size: 1.3rem; } }
 
 .sections {
   background-color: white;
   padding: 0.5rem;
   font-size: 16px; }
+  @media (min-width: 600px) {
+    .sections {
+      margin: 10% 16% 20% 16%; } }
+
+.section {
+  margin: 10% 0 0 0; }
+  @media (min-width: 600px) {
+    .section {
+      padding-left: 50px;
+      padding-bottom: 50px; } }
 
 .logo {
-  -webkit-box-flex: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -223,6 +258,20 @@ h3 {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center; }
+  @media (min-width: 600px) {
+    .logo {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; } }
+  @media (min-width: 1000px) {
+    .logo {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+      align-self: center; } }
 
 .spin {
   display: none;
@@ -236,11 +285,54 @@ h3 {
 .storys {
   width: 100%;
   position: relative; }
+  @media (min-width: 600px) {
+    .storys {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-flex: 1;
+              flex-grow: 1;
+      flex-basis: 50%;
+      position: relative; } }
+  @media (min-width: 1000px) {
+    .storys {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-flex: 1;
+              flex-grow: 1;
+      flex-basis: 25%;
+      position: relative; } }
+
+@media (min-width: 600px) {
+  .articles {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+            align-items: flex-start; } }
+
+@media (min-width: 1000px) {
+  .articles {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+            align-items: flex-start; } }
 
 .articles .storys {
   height: 450px;
   background-size: cover;
   width: 100%; }
+  @media (min-width: 600px) {
+    .articles .storys {
+      height: 300px; } }
 
 .story-text {
   bottom: 0;
@@ -251,98 +343,21 @@ h3 {
 
 .note {
   margin-left: 3rem; }
+  @media (min-width: 600px) {
+    .note {
+      margin-left: 15rem; } }
+  @media (min-width: 1000px) {
+    .note {
+      margin: 0% 3% 0; } }
 
 .site-footer {
   font-size: 16px;
-  margin: 2rem;
-  margin-left: 4rem; }
-  .site-footer p {
-    color: #c2c2c2; }
-
-@media screen and (min-width: 600px) {
-  .articles {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-box-align: start;
-            align-items: flex-start; }
-    .articles .storys {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-              flex-direction: row;
-      -webkit-box-flex: 1;
-              flex-grow: 1;
-      flex-basis: 50%;
-      position: relative; }
-  .articles .storys {
-    height: 300px; }
-  .site {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-            justify-content: space-between; }
-  .logo {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    height: 80vh; }
-  img {
-    width: 280px;
-    height: auto;
-    padding: 0 20px 0 30px; }
-  .section {
-    padding-left: 50px;
-    padding-bottom: 50px; }
-  h3 {
-    font-size: 1.3rem; }
-  .sections {
-    margin: 10% 16% 20% 16%; }
-  .note {
-    margin-left: 15rem; }
-  .site-footer {
-    margin: 3rem;
-    margin-left: 17rem;
-    font-size: 16px; } }
-
-@media screen and (min-width: 1000px) {
-  main {
-    display: -webkit-box;
-    display: flex;
-    text-align: left;
-    width: 100%;
-    padding-top: 50px; }
-  .logo {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: start;
-            justify-content: flex-start;
-    align-self: center; }
-  .articles {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-box-align: start;
-            align-items: flex-start; }
-    .articles .storys {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-              flex-direction: row;
-      -webkit-box-flex: 1;
-              flex-grow: 1;
-      flex-basis: 25%;
-      position: relative; }
-  .site-footer {
-    margin-left: 2rem; } }
+  margin: 2rem 0 2rem 5rem;
+  color: #c2c2c2; }
+  @media (min-width: 600px) {
+    .site-footer {
+      margin: 5% 0 0 35%;
+      font-size: 16px; } }
+  @media (min-width: 1000px) {
+    .site-footer {
+      margin-left: 2rem; } }

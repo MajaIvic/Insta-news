@@ -2,39 +2,78 @@ body {
   background-color: black;
   min-height: 100vh;
 }
-main {
-  height: 89vh;
+.site_header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.scale_header {
+    height: 89vh;
+  }
+
+  @include tablet {
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  @include desktop {
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 p {
-  color: white;
+  color: $primary-color;
   font-family: "Open Sans", sans-serif;
-}
-img {
-  display: flex;
-  padding-top: 25%;
 }
 
 h3 {
-  color: white;
-  padding-top: 1rem;
-  padding-bottom: 3%;
+  color: $primary-color;
+  margin: 10% 0% 10%;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: $primary-font-size;
   font-weight: 300;
+
+  @include tablet {
+    font-size: 1.3rem;
+  }
 }
 .sections {
-  background-color: white;
+  background-color: $primary-color;
   padding: 0.5rem;
-  font-size: 16px;
+  font-size: $primary-font-size;
+  @include tablet {
+    margin: 10% 16% 20% 16%;
+  }
+}
+
+.section {
+  margin: 10% 0 0 0;
+  @include tablet {
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .logo {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+  }
 }
 .spin {
   display: none;
@@ -49,11 +88,40 @@ h3 {
 .storys {
   width: 100%;
   position: relative;
+  @include tablet {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 50%;
+    position: relative;
+  }
+  @include desktop {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 25%;
+    position: relative;
+  }
+}
+.articles {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
 .articles .storys {
   height: 450px;
   background-size: cover;
   width: 100%;
+  @include tablet {
+    height: 300px;
+  }
 }
 .story-text {
   bottom: 0;
@@ -64,102 +132,22 @@ h3 {
 }
 .note {
   margin-left: 3rem;
-}
-.site-footer {
-  font-size: 16px;
-  margin: 2rem;
-  margin-left: 4rem;
-  p {
-    color: #c2c2c2;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .articles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    .storys {
-      flex-direction: row;
-      flex-grow: 1;
-      flex-basis: 50%;
-      position: relative;
-    }
-    // .story-text {
-    //   padding: 0.5rem;
-    // }
-  }
-  .articles .storys {
-    height: 300px;
-  }
-  .site {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .logo {
-    display: flex;
-    flex-direction: row;
-    height: 80vh;
-  }
-  img {
-    width: 280px;
-    height: auto;
-    padding: 0 20px 0 30px;
-  }
-
-  .section {
-    padding-left: 50px;
-    padding-bottom: 50px;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  .sections {
-    margin: 10% 16% 20% 16%;
-  }
-  .note {
+  @include tablet {
     margin-left: 15rem;
   }
-
-  .site-footer {
-    margin: 3rem;
-    margin-left: 17rem;
-    font-size: 16px;
+  @include desktop {
+    margin: 0% 3% 0;
   }
 }
-@media screen and (min-width: 1000px) {
-  main {
-    display: flex;
-    text-align: left;
-    width: 100%;
-    padding-top: 50px;
+.site-footer {
+  font-size: $primary-font-size;
+  margin: 2rem 0 2rem 5rem;
+  color: #c2c2c2;
+  @include tablet {
+    margin: 5% 0 0 35%;
+    font-size: $primary-font-size;
   }
-
-  .logo {
-    display: flex;
-    justify-content: flex-start;
-    align-self: center;
-  }
-  .articles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    .storys {
-      flex-direction: row;
-      flex-grow: 1;
-      flex-basis: 25%;
-      position: relative;
-    }
-  }
-  .site-footer {
+  @include desktop {
     margin-left: 2rem;
   }
 }

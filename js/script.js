@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
   $(document).ready(function() {});
 
   $("#select").on("change", function() {
+    // $("header").css("height", "50vh");
+    $("header").addClass("scale_header");
     if ($(this).val() === "sections") {
       $(".spin").hide();
     } else {
