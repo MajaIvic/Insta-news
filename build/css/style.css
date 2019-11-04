@@ -370,7 +370,8 @@ h3 {
 .site-footer {
   font-size: 16px;
   margin: 5% 0 3% 28%;
-  color: #c2c2c2; }
+  color: #c2c2c2;
+  opacity: 0.69; }
   @media (min-width: 600px) {
     .site-footer {
       margin: 5% 0 0 35%;
